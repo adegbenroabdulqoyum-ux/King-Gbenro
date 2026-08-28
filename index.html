@@ -3,30 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gbenro | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Design System */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hero Header */
+        header {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        /* Profile/Logo Image Styling */
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Grid Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1.25rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header / Hero Section -->
-    <header>
-        <div class="container">
+    <div class="container">
+        <!-- Hero Header -->
+        <header>
+            <!-- Your newly added image -->
+            <img src="https://res.cloudinary.com/h4rn61qd/image/upload/v1787958267/logo.png" alt="Gbenro Logo" class="profile-img">
+            
             <h1>Hi, I'm <span class="highlight">Gbenro</span></h1>
             <p class="subtitle">Finance & Econometrics Enthusiast | Web Creator</p>
-        </div>
-    </header>
+        </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about">
             <h2>About Me</h2>
             <p>Welcome to my personal site! I specialize in financial data analysis, risk modeling, and digital projects. I build clean, efficient solutions for real-world problems.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
+        <!-- Projects Section -->
+        <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -38,23 +174,19 @@
                     <p>Structured video campaign schedules and promotional strategy workflows.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
+        <!-- Contact Section -->
+        <section id="contact">
             <h2>Get In Touch</h2>
             <p>Feel free to reach out for collaborations or inquiries.</p>
             <a href="mailto:your-email@example.com" class="btn">Email Me</a>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Gbenro. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Gbenro. All rights reserved.</p>
+        </footer>
+    </div>
 
-    <!-- Script File Link (Connects your separate script.js) -->
-    <script src="script.js"></script>
 </body>
 </html>
